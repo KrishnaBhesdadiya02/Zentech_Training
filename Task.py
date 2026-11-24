@@ -984,24 +984,6 @@ for i in range(1,n+1):
         print("*",end="")
         print(" "*mspace,end="")
         print("*") 
-    
-
-
-pip install requests beautifulsoup4
-
-import requests
-from bs4 import BeautifulSoup
-
-url = "https://darshan.ac.in"
-
-response = requests.get(
-    url,
-    timeout=15,
-    headers={"User-Agent": "LearningScraper/1.0"}
-)
-response.raise_for_status()
-
-soup = BeautifulSoup(response.text, "html.parser")
 
 print("Page title:", soup.title.get_text(strip=True)
       if soup.title else "No title")
